@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" href="image/istockphoto-1193039142-612x612.jpg" type="image/jpg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 110vh;
+            background-color: #f5a55b;
+            
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .form-box {
+            background-color:rgb(248, 247, 246);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 420px;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+        }
+
+        .input-box input, .input-box select, .input-box textarea, .label-input-box {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ff9169;
+            border-radius: 25px;
+            background-color: #f3f6ff;
+            outline: none;
+        }
+
+        option {
+            color: #ff6b35;
+        }
+
+        input::placeholder {
+            color: #b0b0b0;
+        }
+
+        button {
+            background-color: #ff6b35;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #e05a2b;
+        }
+
+        .login-btn {
+            background-color: #e25c03;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            padding: 12px;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        
+        }
+
+        .login-btn:hover {
+            background-color: #a14507;
+        }
+
+
+        button.reset-btn {
+            background-color: #b0b0b0;
+            margin-top: 10px;
+        }
+
+        button.reset-btn:hover {
+            background-color: #999999;
+        }
+
+        textarea {
+            border-radius: 10px;
+        }
+
+        .agree-box {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .agree-box input {
+            margin-right: 5px;
+        }
+
+        .agree-box a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+
+        .agree-box a:hover {
+            text-decoration: underline;
+        }
+
+        .label-input-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-radius: 25px;
+        }
+
+        .label-input-box label {
+            width: 40%;
+            text-align: left;
+            padding-right: 10px;
+            
+        }
+
+        .label-input-box input, .label-input-box textarea, .label-input-box select {
+            width: 55%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <div class="logo">
+                <img src="image/images.png" alt="Logo">
+            </div>
+
+            <h2>Registration</h2>
+
+            <form>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" name="name" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" placeholder="you@email.com" name="email" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="tel" placeholder="Contact (e.g. +880-1XXXXXXXXX)" name="contact" required>
+                </div>
+
+                
+
+                <div class="input-box">
+                    <select name="country" required>
+                        <option value="" disabled selected>Select Country...</option>
+                        <option value="bangladesh">BANGLADESH</option>
+                        <option value="pakistan">PAKISTAN</option>
+                        <option value="australia">AUSTRALIA</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">CANADA</option>
+                        <option value="uk">UK</option>
+                        <option value="germany">GERMANY</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <input type="date" placeholder="Birthday" name="birthday" required>
+                </div>
+
+                <div class="input-box">
+                    <select name="gender" required>
+                        <option value="" disabled selected>Choose Gender...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <select name="marital_status" required>
+                        <option value="" disabled selected>Select Marital Status...</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="widowed">Widowed</option>
+                    </select>
+                </div>
+
+                <div class="label-input-box">
+                    <label for="children">Children</label>
+                    <input type="number" name="children" id="children" min="0" max="10" value="0" required>
+                </div>
+
+                <div class="label-input-box">
+                    <label for="file">Upload CV</label>
+                    <input type="file" name="cv" id="file" required>
+                </div>
+
+                <div class="input-box">
+                    <textarea placeholder="Additional Information" name="additional_info" rows="2" required></textarea>
+                </div>
+
+                <div class="agree-box">
+                    <input type="checkbox" name="terms" required>
+                    <span>I agree with the <a href="#">terms and conditions</a></span>
+                </div>
+                <br>
+                <button type="submit">Register Now</button>
+                
+                <a href="http://127.0.0.1:5500/Registration/Login.html" class="login-btn" target="_blank">Login</a>
+
+                <button type="reset" class="reset-btn">Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

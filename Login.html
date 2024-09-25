@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" href="image/profile-icon-login-head-icon-vector.jpg" type="image/jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+           
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .login-box {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ff9169;
+            border-radius: 25px;
+            background-color: #f3f6ff;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #b0b0b0;
+        }
+
+        .login-actions {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .login-actions a {
+            text-decoration: none;
+            color: #ff6b35;
+            font-size: 14px;
+        }
+
+        .login-actions a:hover {
+            text-decoration: underline;
+            
+        }
+
+        button {
+            background-color: #ff6b35;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #e05a2b;
+        }
+
+        .register-btn {
+            background-color: #b0b0b0;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            padding: 12px;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .register-btn:hover {
+            background-color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+
+            <div class="logo">
+                <img src="image/login-form-icon-vector-35775220.jpg" alt="Logo">
+            </div>
+
+            <h2>Login</h2>
+
+            <form action="your_login_endpoint" method="POST">
+               
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Username" name="username" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="username">Email</label>
+                    <input type="text" id="username" placeholder="you@email.com" name="username" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password" name="password" required>
+                </div>
+
+                <div class="login-actions">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit">Login</button>
+                <a href="http://127.0.0.1:5500/Registration/Registration.html" class="register-btn" target="_blank">Register</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
